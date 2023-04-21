@@ -1,0 +1,33 @@
+// bootstrap breakpoints
+$xs: "width >= 370px";
+$sm: "width >= 576px";
+$md: "width >= 768px";
+$lg: "width >= 992px";
+$xl: "width >= 1200px";
+
+@mixin flex($direction: row, $justify: flex-start, $align: flex-start, $wrap: no-wrap){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+
+// återanvändbara klasser
+.hidden {
+    display: none;
+}
+.p-1 {
+    padding: 1rem;
+}
+.m-1 {
+    margin: 1rem;
+}
+.flex {
+    @include flex();
+}
+.flex-col {
+    @include flex($direction:column);
+}
+
